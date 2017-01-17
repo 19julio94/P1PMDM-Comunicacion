@@ -20,4 +20,15 @@
         android:id="@+id/send"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="46dp"
+        android:id="@+id/tv2"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/send"
+        android:layout_alignEnd="@+id/send" />
 </RelativeLayout>
