@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.app.Activity.RESULT_OK;
+
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -20,7 +22,7 @@ public class MainActivityFragment extends Fragment {
 
     Button boton;
     TextView texto1;
-    static final int PICK_CONTACT_REQUEST = 1;// Codigo de solicitud
+    static final int CODE = 1;// Codigo de solicitud
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +41,7 @@ public class MainActivityFragment extends Fragment {
                 i.putExtra("Hola","Activity2");
 
 
-                startActivityForResult(i,PICK_CONTACT_REQUEST);
+                startActivityForResult(i,CODE          );
             }
         });
 
@@ -49,7 +51,15 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CODE) {
+
+            if (resultCode == RESULT_OK) {
+
+                String result=data.getStringExtra("llamar2");
+                texto1.setText(result);
+
+            }
 
 
-    }
+        }
 }
