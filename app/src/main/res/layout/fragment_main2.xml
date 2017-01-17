@@ -12,4 +12,12 @@
     tools:showIn="@layout/activity_main2">
 
 
+    <Button
+        android:text="TEXTO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:id="@+id/send"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

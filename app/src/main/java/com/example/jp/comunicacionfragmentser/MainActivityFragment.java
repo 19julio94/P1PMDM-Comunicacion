@@ -18,6 +18,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     Button boton;
+    static final int PICK_CONTACT_REQUEST = 1;// Codigo de solicitud
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class MainActivityFragment extends Fragment {
 
                 Intent i=new Intent(getActivity(),Main2Activity.class);
 
-                Toast.makeText(getActivity(), "Activity 2", Toast.LENGTH_SHORT).show();
+
 
                 startActivity(i);
             }
